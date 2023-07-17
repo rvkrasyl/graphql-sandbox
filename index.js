@@ -9,7 +9,15 @@ app.get("/", (req, res) => {
 });
 
 const root = {
-  hello: () => "Hi from GraphQL",
+  product: () => {
+    return {
+      id: 285426889,
+      name: "widget",
+      description: "Some widget to use",
+      price: 34.99,
+      soldout: false,
+    };
+  },
 };
 
 app.use(
